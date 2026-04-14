@@ -1,3 +1,23 @@
+
+
+**\[16]. InterGSEdit: Interactive 3D Gaussian Splatting Editing with 3D Geometry-Consistent Attention Prior**
+
+* 🧑‍🎓 **Author**：Minghao Wen, Shengjie Wu, Kangkan Wang, Dong Liang
+* 🔗 **Link**：\[[arXiv:2507.04961](https://arxiv.org/abs/2507.04961)]
+* 🤔 **Challenge**：Text-guided 3D editing often suffers from linguistic ambiguity and non-rigid deformation errors, leading to local artifacts, texture blurring, and significant multi-view semantic variations.
+* 📖 **Introduction**：This work introduces InterGSEdit, a framework that leverages a user-selected key view to anchor the editing process and constructs a 3D Geometry-Consistent Attention Prior (GAP3D) through weighted unprojection. It incorporates an Attention Fusion Network (AFN) that adaptively prioritizes 3D-constrained attention for geometric consistency and 2D cross-attention for fine-grained feature generation.
+
+
+
+**\[15]. Variation-aware Flexible 3D Gaussian Editing (ICLR 2026)**
+
+* 🧑‍🎓 **Author**：Hao Qin, Yukai Sun, Meng Wang, Ming Kong, Mengxu Lu, Qiang Zhu
+* 🔗 **Link**：\[[arXiv:2602.11638](https://arxiv.org/abs/2602.11638)]
+* 🤔 **Challenge**：Traditional indirect editing methods project 2D modifications back into 3D, which inevitably introduces cross-view inconsistencies and constrains both the flexibility and computational efficiency of the editing process.
+* 📖 **Introduction**：The paper proposes a native editing framework that predicts attribute variations of Gaussian primitives in a feedforward manner via a novel variation predictor distilled from 2D editing knowledge. The method utilizes a variation field and parallel decoding functions to iteratively infer attribute changes, allowing for seamless distillation from diverse 2D editors into a unified 3D editing predictor.
+
+
+
 **\[14]. GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting (CVPR 2024)**
 
 * 🧑‍🎓 **Author**：Yiwen Chen, Zilong Chen, Chi Zhang, Feng Wang, Xiaofeng Yang, Yikai Wang, Zhongang Cai, Lei Yang, Huaping Liu, Guosheng Lin
@@ -93,7 +113,7 @@
 * 🧑‍🎓 **Author**：Ziyu Chen, Jiawei Yang, Jiahui Huang, Riccardo de Lutio, Janick Martinez Esturo, Boris Ivanovic, Or Litany, Zan Gojcic, Sanja Fidler, Marco Pavone, Li Song, Yue Wang
 * 🔗 **Link**：\[[arXiv:2408.16760](https://arxiv.org/abs/2408.16760)]
 * 🤔 **Challenge**：Existing neural field/3DGS methods focus on vehicles, lacking holistic reconstruction of diverse dynamic foregrounds (pedestrians, cyclists) for full urban simulations like human behavior.
-* 📖 **Introduction**：OmniRe builds scene graphs on 3DGS with canonical Gaussian representations for all dynamic actors from on-device logs. It enables ~60Hz holistic simulations including human-vehicle interactions, outperforming SOTA on Waymo and generalizing to other datasets.
+* 📖 **Introduction**：OmniRe builds scene graphs on 3DGS with canonical Gaussian representations for all dynamic actors from on-device logs. It enables \~60Hz holistic simulations including human-vehicle interactions, outperforming SOTA on Waymo and generalizing to other datasets.
 
 
 
@@ -121,3 +141,4 @@
 * 🔗 **Link**：\[[arXiv:2408.06975](https://arxiv.org/abs/2408.06975)]
 * 🤔 **Challenge**：Multi-spectral scene representation, rendering, and editing lack accuracy; existing methods (XNeRF, SpectralNeRF) fail to capture semantic/material insights across spectra.
 * 📖 **Introduction**：SpectralGaussians extends 3DGS for cross-spectral rendering, generating semantic splats from multi-view spectra/segmentations. It introduces per-spectrum PBR estimating reflectance/lights, enabling style transfer/inpainting/removal, outperforming spectral/non-spectral baselines.
+

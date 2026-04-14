@@ -1,9 +1,54 @@
-**\[21]. ProDyG: Progressive Dynamic Scene Reconstruction via Gaussian Splatting from Monocular Videos**
+**\[26]. Dynamic Gaussian Scene Reconstruction from Unsynchronized Videos (AAAI/2025)**
 
-* 🧑‍🎓 **Author**：Xiaoting Yin, Hao Shi, Kailun Yang, Jiajun Zhai, Shangwei Guo, Lin Wang, Kaiwei Wang
-* 🔗 **Link**：\[[arXiv:2509.18566](https://arxiv.org/abs/2509.18566)]
-* 🤔 **Challenge**：Reconstructing dynamic humans together with static scenes from monocular videos remains difficult, especially under fast motion, where RGB frames suffer from motion blur.
-* 📖 **Introduction**：This paper presents a novel event-guided human-scene reconstruction framework that jointly models human and scene from a single monocular event camera via 3D Gaussian Splatting. By assigning a learnable semantic attribute to each Gaussian and introducing an event-driven supervision loss, our method removes the need for external human masks and robustly mitigates motion blur. On two benchmark datasets, ZJU-MoCap-Blur and MMHPSD-Blur, it delivers state-of-the-art human-scene reconstruction, with notable gains over strong baselines in PSNR/SSIM and reduced LPIPS, especially for high-speed subjects.
+* 🧑‍🎓 **Author**：Zhixin Xu, Hengyu Zhou, Yuan Liu, Wenhan Xue, Hao Pan, Wenping Wang, Bin Wang
+* 🔗 **Link**：\[[arXiv:2511.11175](https://arxiv.org/abs/2511.11175)]
+* 🤔 **Challenge**：Most 4DGS frameworks assume input videos are perfectly synchronized, but real-world captures often suffer from temporal misalignment (network latency, manual triggers), causing severe motion blur and artifacts.
+* 📖 **Introduction**：This paper proposes a coarse-to-fine optimization framework to estimate and compensate for unknown temporal offsets of each camera during the 4D reconstruction process. By integrating this module into existing 4DGS pipelines, it achieves robust, artifact-free dynamic reconstruction from asynchronous multi-view data.
+
+
+
+**\[25]. SpeeDe3DGS: Speedy Deformable 3D Gaussian Splatting with Temporal Pruning and Motion Grouping (CVPR/2026)**
+
+* 🧑‍🎓 **Author**：Allen Tu, Haiyang Ying, Alex Hanson, Yonghan Lee, Tom Goldstein, Matthias Zwicker
+* 🔗 **Link**：\[[arXiv:2506.07917](https://arxiv.org/abs/2506.07917)]
+* 🤔 **Challenge**：While dynamic extensions of 3DGS achieve high-quality results, the per-Gaussian neural inference required for deformation fields makes these models computationally expensive and memory-intensive for long sequences.
+* 📖 **Introduction**：SpeeDe3DGS bridges the efficiency-fidelity gap through three modules: Temporal Sensitivity Pruning (TSP) to remove low-impact Gaussians, Temporal Sensitivity Sampling (TSS), and Motion Grouping. These contributions enable significantly faster training and rendering while maintaining high-fidelity reconstruction of monocular dynamic scenes.
+
+
+
+**\[24]. 4DM: 4D Photorealistic Mapping from Monocular Video with 3D Gaussian Splatting**
+
+* 🧑‍🎓 **Author**：Lizhi Bai
+* 🔗 **Link**：\[[https://doi.org/10.1117/12.3094288](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/14124/3094288/4DM--4D-photorealistic-mapping-from-monocular-video-with-3D/10.1117/12.3094288.short)]
+* 🤔 **Challenge**：Traditional monocular 4D reconstruction struggles with dynamic consistency and redundant sampling in new frames, often failing to maintain high visual fidelity across long sequences.
+* 📖 **Introduction**：4DM is a mapping framework that transforms monocular video into 4D scenes using only 2D priors like depth and optical flow. It employs image gradient-based quad-tree sampling to minimize redundancy and K-Nearest Neighbor (KNN) densification for new Gaussian points. The pipeline alternately optimizes camera poses and Gaussian dynamics, achieving significant improvements in visual fidelity on the DAVIS dataset.
+
+
+
+**\[23]. GC-4DGS: Geometry-Consistent 4D Gaussian Splatting for Sparse-Input Dynamic View Synthesis**
+
+* 🧑‍🎓 **Author**：Yiwei Li, Jiannong Cao, Penghui Ruan, Divya Saxena, Songye Zhu, Yinfeng Cao
+* 🔗 **Link**：\[[arXiv:2511.23044](https://arxiv.org/abs/2511.23044)]
+* 🤔 **Challenge**：Dynamic scene reconstruction significantly degrades under sparse-view inputs due to the ill-posed nature of 4D geometric optimization and incoherent learning of temporal geometry.
+* 📖 **Introduction**：GC-4DGS infuses geometric consistency into the 4DGS framework by utilizing a global-local depth regularization approach. It distills spatiotemporal-consistent information from monocular depth estimators and Multi-View Stereo (MVS) priors to regularize the 4D volume. The method achieves a substantial 2.62dB PSNR improvement over prior sparse-input baselines while remaining deployable on edge devices.
+
+
+
+**\[22]. Diff4Splat: Controllable 4D Scene Generation with Latent Dynamic Reconstruction Models (CVPR/2026)**
+
+* 🧑‍🎓 **Author**：Panwang Pan, Chenguo Lin, Jingjing Zhao, Chenxin Li, Yuchen Lin, Haopeng Li, Honglei Yan, Kairun Wen, Yunlong Lin, Yixuan Yuan, Yadong Mu
+* 🔗 **Link**：\[[arXiv:2511.00503](https://arxiv.org/abs/2511.00503)]
+* 🤔 **Challenge**：Most 4D reconstruction methods require time-consuming per-scene optimization and lack high-level controllability over motion and appearance. Single-image to 4D generation is often bottlenecked by the gap between 2D video diffusion priors and explicit 3D representations.
+* 📖 **Introduction**：Diff4Splat is a feed-forward framework that generates a deformable 3D Gaussian field from a single image and camera trajectory in one forward pass. It leverages a Latent Dynamic Reconstruction Model (LDRM) to bridge video diffusion latents with temporal transformers, enabling real-time interaction (6.7ms rendering) and precise pose control without test-time optimization.
+
+
+
+**\[21]. MoE-GS: Mixture of Experts for Dynamic Gaussian Splatting (ICLR/2026)**
+
+* 🧑‍🎓 **Author**：In-Hwan Jin, Hyeongju Mun, Joonsoo Kim, Kugjin Yun, Kyeongbo Kong
+* 🔗 **Link**：\[[arXiv:2510.19210](https://arxiv.org/abs/2510.19210)]
+* 🤔 **Challenge**：Existing dynamic 3DGS methods often employ a single deformation prior (e.g., global MLP or local displacement), which fails to generalize across diverse motion types within a single scene. This leads to inconsistent reconstruction quality when handling complex, heterogeneous dynamics.
+* 📖 **Introduction**：This paper introduces MoE-GS, the first framework to incorporate Mixture-of-Experts (MoE) into dynamic Gaussian splatting. By combining heterogeneous deformation priors through a gating mechanism, the model adaptively selects the most suitable expert for specific motion components. It consistently outperforms state-of-the-art methods on N3V and Technicolor datasets with improved efficiency.
 
 
 
@@ -184,3 +229,4 @@
 * 🔗 **Link**：\[[arXiv:2308.09713](https://arxiv.org/abs/2308.09713)]
 * 🤔 **Challenge**：Extend 3DGS from modeling static scenes only to dynamic scenes.
 * 📖 **Introduction**：Dynamic 3D Gaussians solve the task of dynamic scene view synthesis and six degrees of freedom (6-DOF) tracking of all dense scene elements, while supporting a wide range of downstream applications, including first-person view synthesis, dynamic scene synthesis, and 4D video editing.
+

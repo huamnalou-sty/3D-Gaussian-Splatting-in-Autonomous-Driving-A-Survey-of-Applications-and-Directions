@@ -1,18 +1,36 @@
+**\[18]. UrbanGS: Semantic-Guided Gaussian Splatting for Urban Scene Reconstruction**
+
+* 🧑‍🎓 **Author**：Ziwen Li, Jiaxin Huang, Runnan Chen, Yunlong Che, Yandong Guo, Tongliang Liu, Fakhri Karray, Mingming Gong
+* 🔗 **Link**：\[[arXiv:2412.03473](https://arxiv.org/abs/2412.03473)]
+* 🤔 **Challenge**：Modeling dynamic urban scenes using 4DGS often treats static and dynamic objects uniformly, leading to unnecessary updates for static elements that ultimately degrade overall reconstruction quality.
+* 📖 **Introduction**：UrbanGS leverages 2D semantic maps to distinguish definite static regions from potentially dynamic elements, enforcing global consistency and KNN-based regularization on static geometry like ground surfaces. For dynamic elements, it aggregates temporal information using learnable time embeddings, allowing accurate modeling of local deformations without compromising the static cityscape (Li et al., 2024).
+
+
+
+**\[17]. A LoD of Gaussians: Unified Training and Rendering for Ultra-Large Scale Reconstruction with External Memory**
+
+* 🧑‍🎓 **Author**：Felix Windisch, Thomas Köhler, Lukas Radl, Mattia D'Urso, Michael Steiner, Dieter Schmalstieg, Markus Steinberger
+* 🔗 **Link**：\[[arXiv:2507.01110](https://arxiv.org/abs/2505.23158)]
+* 🤔 **Challenge**：Reconstructing ultra-large, multi-scale environments traditionally requires scene chunking, which introduces boundary artifacts, impedes cross-scale training, and saturates GPU memory during rendering.
+* 📖 **Introduction**：This method sidesteps partitioning entirely by storing the full scene in CPU memory while directly training a dynamic Level-of-Detail (LoD) representation. By leveraging a hybrid Sequential Point Tree data structure and a lightweight caching system, it seamlessly streams view-relevant Gaussians to the GPU, enabling unified training and rendering from street-level details to large aerial city views (Windisch et al., 2025).
+
+
+
+**\[16]. LODGE: Level-of-Detail Large-Scale Gaussian Splatting with Efficient Rendering (NeurIPS/2025)**
+
+* 🧑‍🎓 **Author**：Jonas Kulhanek, Marie-Julie Rakotosaona, Fabian Manhardt, Christina Tsalicoglou, Michael Niemeyer, Torsten Sattler, Songyou Peng, Federico Tombari
+* 🔗 **Link**：\[[arXiv:2505.23158](https://arxiv.org/abs/2505.23158)]
+* 🤔 **Challenge**：Scaling 3DGS to massive environments on devices with strict memory constraints is difficult due to the requirement of retaining millions of primitives in VRAM simultaneously.
+* 📖 **Introduction**：LODGE constructs a hierarchical Level-of-Detail representation by selectively filtering and dynamically pruning Gaussians based on the camera distance via a depth-aware 3D smoothing step. The scene is segmented into spatial blocks that load dynamically into memory without boundary artifacts, dramatically lowering GPU memory requirements without sacrificing visual fidelity (Kulhanek et al., 2025).
+
+
+
 **\[15]. Graph-Guided Scene Reconstruction from Images with 3D Gaussian Splatting (ICLR 2025)**
 
 * 🧑‍🎓 **Author**：Chong Cheng, Gaochao Song, Yiyang Yao, Qinzheng Zhou, Gangjian Zhang, Hao Wang
 * 🔗 **Link**：\[[arXiv:2502.17377](https://arxiv.org/abs/2502.17377)]
 * 🤔 **Challenge**：Existing methods need precise poses and dense views; 3DGS overfits sparse viewpoints, slowing large open scene reconstruction.
 * 📖 **Introduction**：GraphGS estimates scene structure via spatial priors to build camera graphs, then applies graph-guided consistency constraints and adaptive sampling for optimized 3DGS, enabling efficient high-fidelity reconstruction from uncalibrated RGB images.
-
-
-
-**\[14]. GeoProg3D: Compositional Visual Reasoning for City-Scale 3D Language Fields (ICCV 2025)**
-
-* 🧑‍🎓 **Author**：Shunsuke Yasuki, Taiki Miyanishi, Nakamasa Inoue, Shuhei Kurita, Koya Sakamoto, Daichi Azuma, Masato Taki, Yutaka Matsuo
-* 🔗 **Link**：\[[arXiv:2506.23352](https://arxiv.org/abs/2506.23352)]
-* 🤔 **Challenge**：Existing 3D language fields are confined to small-scale scenes, lacking scalability and compositional reasoning for complex city-scale urban environments.
-* 📖 **Introduction**：GeoProg3D is a visual programming framework with Geography-aware City-scale 3D Language Field (GCLF) for memory-efficient hierarchical modeling and Geographical Vision APIs (GV-APIs) driven by LLMs for natural language queries. It introduces GeoEval3D benchmark with 952 pairs across five tasks, achieving SOTA in geographic reasoning.
 
 
 
@@ -130,3 +148,4 @@
 * 🔗 **Link**：\[[arXiv:2401.14032](https://arxiv.org/abs/2401.14032)]
 * 🤔 **Challenge**：Existing large-scale datasets lack precise LiDAR ground truth, suffer from image-time differences, or fail to correlate point clouds with images; Gaussian Splatting blurs in close views and inadequately handles rooftop/drone data.
 * 📖 **Introduction**：GauU-Scene introduces a 1.5 km² dataset with drone-captured RGB images and high-accuracy LiDAR point clouds across urban/academic scenes. It benchmarks Gaussian Splatting, proposes a LiDAR-Image fusion method to boost reconstruction via Gaussian priors, and reveals gaps in large-scale drone-based 3D reconstruction.
+
