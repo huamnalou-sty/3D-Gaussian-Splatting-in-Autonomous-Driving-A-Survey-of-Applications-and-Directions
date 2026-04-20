@@ -2,6 +2,14 @@ Since there are few reviews specifically introducing the development of 3DGS in 
 
 
 
+**\[14]. Large-Scale Urban Scene Reconstruction Using 3D Gaussian Splatting and Satellite Imagery**
+
+* 🧑‍🎓 **Author**：Hanqing Xu, Haiyan Guan, Lingfei Ma, Jonathan Li
+* 🔗 **Link**：\[[IEEE Xplore / DOI: 10.1109/IGARSS55030.2025.11242741](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11242741&tag=1)]
+* 📖 **Introduction**：This paper explores the reconstruction of complex, large-scale urban downtown areas using 3D Gaussian Splatting (3DGS) and satellite imagery. The study demonstrates that 3DGS significantly outperforms Neural Radiance Fields (NeRF) in both accuracy and efficiency, achieving a 10–13 dB improvement in PSNR and over 10× faster training speeds. A key contribution of this research is the validation of 3DGS's high robustness under multi-temporal lighting conditions (early morning, noon, and dusk), with quantitative metric fluctuations remaining below 2% in most cases. By proposing a scalable pipeline utilizing Google Earth Studio, the authors provide an efficient technical framework for building high-definition digital twins to support future urban planning and management.
+
+
+
 **\[13]. A Survey on Collaborative SLAM with 3D Gaussian Splatting**
 
 * 🧑‍🎓 **Author**：Phuc Nguyen Xuan, Thanh Nguyen Canh, Huu-Hung Nguyen, Nak Young Chong, Xiem HoangVan
@@ -103,3 +111,4 @@ Since there are few reviews specifically introducing the development of 3DGS in 
 * 🧑‍🎓 **Author**：Guikun Chen, Wenguan Wang
 * 🔗 **Link**：\[[arXiv:2401.03890](https://arxiv.org/abs/2401.03890)]
 * 📖 **Introduction**：This is the first systematic overview of the latest developments and key contributions in the field of 3DGS. As the first review article on 3DGS, it has the highest citation count among 3DGS-related review articles on Google Scholar and is definitely worth reading for all scholars interested in 3DGS.
+
