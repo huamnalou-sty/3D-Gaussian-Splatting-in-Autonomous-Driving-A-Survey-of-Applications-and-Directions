@@ -2,6 +2,14 @@ Since there are few reviews specifically introducing the development of 3DGS in 
 
 
 
+**\[15]. A survey on surface reconstruction based on 3D Gaussian splatting**
+
+* 🧑‍🎓 **Author**：Zheng Xu, Gang Chen​, Feng Li, Lingyu Chen, Yuanhang Cheng
+* 🔗 **Link**：\[[PeerJ Computer Science / DOI: 10.7717/peerj-cs.3034](https://peerj.com/articles/cs-3034/)]
+* 📖 **Introduction**：This survey specifically explores surface reconstruction techniques based on 3D Gaussian Splatting (3DGS). The paper categorizes the core stages of surface reconstruction algorithms into scene representation, Gaussian optimization, and surface structure extraction, systematically reviewing the evolution from implicit neural surfaces to explicit primitives. Compared to traditional NeRF methods, this survey emphasizes the superior performance of 3DGS in handling weak textures, fine structures, and non-Lambertian surfaces. Furthermore, the paper details the current state of 3DGS applications in fields such as autonomous driving, large-scale scene construction, digital human modeling, and 3D editing, while analyzing the challenges of balancing geometric accuracy with rendering efficiency in complex environments.
+
+
+
 **\[14]. Large-Scale Urban Scene Reconstruction Using 3D Gaussian Splatting and Satellite Imagery**
 
 * 🧑‍🎓 **Author**：Hanqing Xu, Haiyan Guan, Lingfei Ma, Jonathan Li
