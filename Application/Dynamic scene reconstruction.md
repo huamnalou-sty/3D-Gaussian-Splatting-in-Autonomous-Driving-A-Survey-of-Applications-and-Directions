@@ -79,6 +79,15 @@
 
 
 
+**\[18]. VAD-GS: Visibility-Aware Densification for 3D Gaussian Splatting in Dynamic Urban Scenes**
+
+* 🧑‍🎓 **Author**：Yikang Zhang, Rui Fan
+* 🔗 **Link**：\[[arXiv:2510.09364](https://arxiv.org/abs/2510.09364)]
+* 🤔 **Challenge**：Standard 3DGS relies heavily on high-quality initial point clouds and overlapping view frustums. In unbounded urban environments (like autonomous driving), camera rays often fail to intersect valid surfaces due to occlusions or sparse viewpoints, leading to incorrect gradient propagation, artifacts, and missing structures where initial points are absent.
+* 📖 **Introduction**：This work proposes VAD-GS, a framework specifically designed for geometry recovery in challenging urban scenes. It introduces a voxel-based visibility reasoning module to identify unreliable geometric structures and a diversity-aware view selection strategy to find informative supporting views. By employing patch matching-based multi-view stereo reconstruction, it can actively "densify" and recover missing structures that were not present in the initial point cloud, ensuring complete and high-fidelity scene reconstruction.
+
+
+
 **\[17]. Motion-Blender Gaussian Splatting for Dynamic Scene Reconstruction**
 
 * 🧑‍🎓 **Author**：Xinyu Zhang, Haonan Chang, Yuhan Liu, Abdeslam Boularias
